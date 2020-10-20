@@ -1,3 +1,5 @@
+import card_manager.card_tool as card_tool
+
 card_info = []
 
 if __name__ == '__main__':
@@ -18,10 +20,10 @@ if __name__ == '__main__':
         if action_str in ['1', '2', '3']:
             # 1新建名片
             if action_str == '1':
-                print(1)
+                card_tool.create_card(card_info)
             # 2显示全部
             elif action_str == '2':
-                print(2)
+                card_tool.show_card(card_info)
             # 3查询名片
             elif action_str == '3':
                 print(3)
