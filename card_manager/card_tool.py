@@ -41,7 +41,22 @@ def show_all():
     """显示所有名片"""
     print('-' * 50)
     print("显示名片")
-    print()
+
+    if len(card_list)==0:
+        print("当前没有任何的名片记录，请使用新建功能添加名片")
+        return
+
+
+    #打印表头
+    for name in ["姓名", "电话", "QQ", "邮箱"]:
+        print(name, end="\t\t\t")
+    print("")
+
+    print("=" * 50)
+
+
+    for card_dict in card_list:
+        print("%s\t\t\t%s\t\t\t%s\t\t\t%s" % (card_dict["name"], card_dict["phone"], card_dict["qq"], card_dict["email"]))
 
 def search_card():
 
